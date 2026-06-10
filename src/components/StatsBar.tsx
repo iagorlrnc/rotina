@@ -1,7 +1,7 @@
 import { stats } from '../data';
 
 const colorMap: Record<string, string> = {
-  violet: 'bg-violet-50 text-violet-700 border-violet-100',
+  pink: 'bg-pink-50 text-pink-700 border-pink-100',
   amber: 'bg-amber-50 text-amber-700 border-amber-100',
   emerald: 'bg-emerald-50 text-emerald-700 border-emerald-100',
   blue: 'bg-blue-50 text-blue-700 border-blue-100',

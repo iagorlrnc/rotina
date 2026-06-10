@@ -3,18 +3,18 @@ import { BlockCard } from './BlockCard';
 
 export function WeekGrid() {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+    <div className="bg-white/80 backdrop-blur-sm border-b border-rose-100/50 overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
       <table className="w-full min-w-[720px] border-collapse">
         <thead>
-          <tr className="bg-gray-50 border-b border-gray-100">
-            <th className="w-20 py-3 px-4 text-left text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <tr className="bg-white/80 backdrop-blur-sm border-b border-rose-100/50">
+            <th className="w-20 py-3 px-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">
               Horário
             </th>
             {schedule.map((day) => (
               <th
                 key={day.short}
                 className={`py-3 px-2 text-center text-xs font-semibold uppercase tracking-wider ${
-                  day.isWeekend ? 'text-gray-300' : 'text-gray-500'
+                  day.isWeekend ? 'text-gray-500' : 'text-gray-500'
                 }`}
               >
                 <span className="hidden sm:inline">{day.name.split('-')[0]}</span>
@@ -32,8 +32,8 @@ export function WeekGrid() {
           />
           {/* Almoço separador */}
           <tr className="border-t border-dashed border-gray-100">
-            <td colSpan={8} className="py-1 px-4 text-[10px] text-gray-300 font-medium tracking-widest uppercase">
-              intervalo 12h – 13h
+            <td colSpan={8} className="py-1 px-4 text-[10px] text-gray-500 font-medium tracking-widest uppercase">
+               Intervalo - Almoço
             </td>
           </tr>
           {/* Tarde */}
@@ -44,8 +44,8 @@ export function WeekGrid() {
           />
           {/* Noite separador */}
           <tr className="border-t border-dashed border-gray-100">
-            <td colSpan={8} className="py-1 px-4 text-[10px] text-gray-300 font-medium tracking-widest uppercase">
-              19h – 22h
+            <td colSpan={8} className="py-1 px-4 text-[10px] text-gray-500 font-medium tracking-widest uppercase">
+              Intervalo
             </td>
           </tr>
           {/* Noite split */}
@@ -60,8 +60,8 @@ function TimeRow({ label, time, blockType }: { label: string; time: string; bloc
   return (
     <tr className="border-t border-gray-100 group">
       <td className="py-3 px-4 align-top">
-        <p className="text-xs font-semibold text-gray-400">{label}</p>
-        <p className="text-xs text-gray-300">{time}</p>
+        <p className="text-xs font-semibold text-gray-500">{label}</p>
+        <p className="text-xs text-gray-500">{time}</p>
       </td>
       {schedule.map((day) => (
         <td key={day.short} className="py-3 px-1.5 align-top">
@@ -70,8 +70,9 @@ function TimeRow({ label, time, blockType }: { label: string; time: string; bloc
               block={day.blocks.find((b) => b.type === blockType)!}
             />
           ) : (
-            <div className="rounded-xl border border-dashed border-gray-100 py-2.5 text-center text-xs text-gray-200">
-              —
+            <div className="rounded-xl bg-pink-50/50 border border-dashed border-pink-200 py-4 text-center text-[11px] text-pink-600 font-bold px-1.5 leading-normal flex flex-col items-center justify-center gap-1 shadow-sm shadow-pink-100/30">
+              <span className="text-base">💖</span>
+              <span className="max-w-[100px] break-words">Tempo livre com meu amor</span>
             </div>
           )}
         </td>
@@ -84,8 +85,8 @@ function NightRow() {
   return (
     <tr className="border-t border-gray-100">
       <td className="py-3 px-4 align-top">
-        <p className="text-xs font-semibold text-gray-400">Noite</p>
-        <p className="text-xs text-gray-300">19–22h</p>
+        <p className="text-xs font-semibold text-gray-500">Noite</p>
+        <p className="text-xs text-gray-500">19–22h</p>
       </td>
       {schedule.map((day) => (
         <td key={day.short} className="py-3 px-1.5 align-top">
@@ -96,8 +97,9 @@ function NightRow() {
               ))}
             </div>
           ) : (
-            <div className="rounded-xl border border-dashed border-gray-100 py-5 text-center text-xs text-gray-200">
-              livre
+            <div className="rounded-xl bg-pink-50/50 border border-dashed border-pink-200 py-4 text-center text-[11px] text-pink-600 font-bold px-1.5 leading-normal flex flex-col items-center justify-center gap-1 shadow-sm shadow-pink-100/30">
+              <span className="text-base">💖</span>
+              <span className="max-w-[100px] break-words">Tempo livre com meu amor</span>
             </div>
           )}
         </td>

@@ -78,10 +78,10 @@ export const blockColors: Record<string, { bg: string; text: string; border: str
     dot: 'bg-amber-500',
   },
   estudo: {
-    bg: 'bg-violet-50',
-    text: 'text-violet-800',
-    border: 'border-violet-200',
-    dot: 'bg-violet-500',
+    bg: 'bg-pink-50',
+    text: 'text-pink-800',
+    border: 'border-pink-200',
+    dot: 'bg-pink-500',
   },
   livre: {
     bg: 'bg-gray-50',
@@ -92,7 +92,7 @@ export const blockColors: Record<string, { bg: string; text: string; border: str
 };
 
 export const stats = [
-  { label: 'Horas de estudo/sem', value: '7h 30min', icon: '📚', color: 'violet' },
+  { label: 'Horas de estudo/sem', value: '7h 30min', icon: '📚', color: 'pink' },
   { label: 'Horas de academia/sem', value: '7h 30min', icon: '🏋️', color: 'amber' },
   { label: 'Horas de estágio/sem', value: '25h', icon: '💼', color: 'emerald' },
   { label: 'Horas de faculdade/sem', value: '20h', icon: '🎓', color: 'blue' },
