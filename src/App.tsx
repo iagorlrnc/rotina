@@ -79,7 +79,6 @@ export default function App() {
       </main>
 
       <footer className="text-center py-6 text-xs text-gray-300 border-t border-gray-100">
-        Rotina atualizada · {new Date().getFullYear()}
       </footer>
     </div>
   );
