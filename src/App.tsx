@@ -11,7 +11,7 @@ export default function App() {
   const todayName = useMemo(() => DAY_NAMES[new Date().getDay()], []);
 
   return (
-    <div className="min-h-screen bg-[#ffd1b3]" style={{ fontFamily: 'var(--font-body)' }}>
+    <div className="min-h-screen bg-[#ffecd1]" style={{ fontFamily: 'var(--font-body)' }}>
       {/* Header */}
       <header className="border-b border-rose-100/50 bg-white/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
